@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, World! - A-Frame</title>
+    <meta name="description" content="Hello, World! - A-Frame">
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-asset-item id="myModelObj" src="interior.obj"></a-asset-item>
+        <a-asset-item id="myModelMtl" src="interior.mtl"></a-asset-item>
+        <img id="city" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg">
+      </a-assets>
+      <a-sky id="image-360" radius="1000" src="#sechelt"></a-sky>
+      <a-entity obj-model="obj: #myModelObj; mtl: #myModelMtl"></a-entity>
+      <a-entity position="0 100 100" rotation="0 45 -30">
+          <a-camera></a-camera>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
